@@ -1,0 +1,30 @@
+{
+  "name": "react-flexheight-textarea",
+  "version": "1.0.0",
+  "description": "<textarea/> component with flexheight for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattew8/react-flexheight-textarea.git"
+  },
+  "author": "mattew4483",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattew8/react-flexheight-textarea/issues"
+  },
+  "homepage": "https://github.com/mattew8/react-flexheight-textarea#readme",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17 || ^18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.2"
+  }
+}
