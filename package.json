@@ -1,13 +1,15 @@
 {
   "name": "react-flexheight-textarea",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "<textarea/> component with flexheight for React",
-  "main": "index.js",
-  "types": "./dist/cjs/types/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:esm": "tsc -p ./tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json"
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -32,17 +34,5 @@
   },
   "files": [
     "dist/**/*"
-  ],
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/esm/types/index.d.ts",
-        "default": "./dist/esm/index.mjs"
-      },
-      "require": {
-        "types": "./dist/cjs/types/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
-    }
-  }
+  ]
 }
