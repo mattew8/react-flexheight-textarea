@@ -3,13 +3,12 @@ import React, {
   useRef,
   useEffect,
   TextareaHTMLAttributes,
-  CSSProperties,
 } from "react";
 
 const FlexHeightTextarea = (
   props: TextareaHTMLAttributes<HTMLTextAreaElement>
 ) => {
-  const { value, onChange: onChangeProps, style: customStyle, ...args } = props;
+  const { value, onChange: onChangeProps, ...args } = props;
   const isControlled = value !== undefined;
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -32,30 +31,9 @@ const FlexHeightTextarea = (
     }
   }, [isControlled]);
 
-  const style = {
-    ...resetStyle,
-    ...customStyle,
-  };
-
   return (
-    <textarea
-      ref={textareaRef}
-      value={value}
-      onChange={onChange}
-      style={style}
-      {...args}
-    />
+    <textarea ref={textareaRef} value={value} onChange={onChange} {...args} />
   );
 };
 
 export default FlexHeightTextarea;
-
-const resetStyle: CSSProperties = {
-  resize: "none",
-  border: "none",
-  overflow: "auto",
-  outline: "none",
-  WebkitBoxShadow: "none",
-  MozBoxShadow: "none",
-  boxShadow: "none",
-};
